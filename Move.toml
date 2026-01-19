@@ -5,4 +5,4 @@ license = "MIT"
 authors = ["Studio Mirai, LLC (build@sm.xyz)"]
 
 [environments]
-mirainet = "dd32b170"
+mirainet = "f1eb94c0"
