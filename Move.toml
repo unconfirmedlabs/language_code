@@ -1,5 +1,5 @@
 [package]
-name = "language_code"
-edition = "2024.beta"
+name = "gengo"
+edition = "2024"
 license = "MIT"
-authors = ["Unconfirmed Labs, LLC (os@unconfirmed.com)"]
+authors = ["Unconfirmed Labs, LLC (os@unconfirmed.net)"]
