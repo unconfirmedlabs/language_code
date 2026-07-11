@@ -1,10 +1,16 @@
-# Gengo
+# Language Code
 
 A Sui Move package providing validated ISO 639-1 language codes as on-chain types.
 
+> Formerly published as `gengo`. Renamed to `language_code` for a literal,
+> standard-named pairing with [`country_code`](https://github.com/unconfirmedlabs/country_code).
+
 ## Overview
 
-Gengo provides a `LanguageCode` struct that wraps a validated two-letter ISO 639-1 language code string. All 184 standard language codes are supported. Invalid codes are rejected at construction time, ensuring that any `LanguageCode` value in your program is always valid.
+`language_code` provides a `LanguageCode` struct that wraps a validated
+two-letter ISO 639-1 language code string. All 184 standard codes are supported.
+Invalid codes are rejected at construction time, so any `LanguageCode` value in
+your program is always valid.
 
 ## Usage
 
@@ -12,7 +18,7 @@ Gengo provides a `LanguageCode` struct that wraps a validated two-letter ISO 639
 
 ```toml
 [dependencies]
-gengo = { git = "https://github.com/unconfirmedlabs/gengo.git", rev = "main" }
+language_code = { git = "https://github.com/unconfirmedlabs/language_code.git", rev = "main" }
 ```
 
 ### Import and use
@@ -20,7 +26,7 @@ gengo = { git = "https://github.com/unconfirmedlabs/gengo.git", rev = "main" }
 ```move
 module example::my_module;
 
-use gengo::language_code::{Self, LanguageCode};
+use language_code::language_code::{Self, LanguageCode};
 
 public struct Post has key, store {
     id: UID,
@@ -39,7 +45,7 @@ public fun create_post(content: String, lang: String, ctx: &mut TxContext): Post
 
 ## API
 
-### `gengo::language_code`
+### `language_code::language_code`
 
 | Function | Signature | Description |
 |---|---|---|
@@ -48,7 +54,7 @@ public fun create_post(content: String, lang: String, ctx: &mut TxContext): Post
 
 ### Types
 
-- **`LanguageCode`** — A wrapper struct with `copy`, `drop`, and `store` abilities. Can be used as a field in other structs, stored in tables, and passed by value.
+- **`LanguageCode`** — A wrapper struct with `copy`, `drop`, and `store` abilities. Can be a field in other structs, stored in tables, and passed by value.
 
 ### Errors
 
@@ -58,7 +64,8 @@ public fun create_post(content: String, lang: String, ctx: &mut TxContext): Post
 
 ## Supported Codes
 
-All 184 ISO 639-1 two-letter codes are supported, from `aa` (Afar) to `zu` (Zulu). See [the full ISO 639-1 list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for reference.
+All 184 ISO 639-1 two-letter codes, from `aa` (Afar) to `zu` (Zulu). See
+[the full ISO 639-1 list](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ## License
 

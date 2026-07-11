@@ -1,4 +1,4 @@
-module gengo::language_code;
+module language_code::language_code;
 
 use std::string::String;
 
