@@ -12,6 +12,15 @@ two-letter ISO 639-1 language code string. All 184 standard codes are supported.
 Invalid codes are rejected at construction time, so any `LanguageCode` value in
 your program is always valid.
 
+## Published packages
+
+Both deployments are immutable.
+
+| Network | Package ID | Transaction digest |
+| --- | --- | --- |
+| Mainnet | `0x69f2d3ee6b5ca1779749b5444d2e42dc7b85a1627d880985fad28f028dd154ea` | `DjjhVQp9EUR2ySkQdpdj7vKVx2i18rY8yDh7ow92ENUn` |
+| Testnet | `0xac318126565a2fab608984a091b3582ba9cda6c32232f567eef50277c5042c36` | `6BhecjQ6mdmq2d85iuA17fzZNfUK5jfUA9vDWC3QPdCb` |
+
 ## Usage
 
 ### Add as a dependency
